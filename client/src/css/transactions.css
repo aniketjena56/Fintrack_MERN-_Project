@@ -1,0 +1,107 @@
+.transactions-page {
+  min-height: 100vh;
+  background: #0a0f1e;
+}
+
+.transactions-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.section-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #e8edf5;
+  margin-bottom: 16px;
+}
+
+/* Search and filter row */
+.filter-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-row input,
+.filter-row select {
+  padding: 10px 14px;
+  background: #111827;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #e8edf5;
+  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-row input        { flex: 1; min-width: 200px; }
+.filter-row input:focus,
+.filter-row select:focus { border-color: #f0b429; }
+.filter-row select option { background: #1f2937; }
+
+/* Transaction list */
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transaction-item {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transaction-left { display: flex; flex-direction: column; gap: 4px; }
+
+.transaction-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e8edf5;
+  text-transform: capitalize;
+}
+
+.transaction-sub  { font-size: 12px; color: #6b7280; }
+
+/* Type badge */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-expense {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+}
+
+.badge-income {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+}
+
+.transaction-amount-red   { font-size: 16px; font-weight: 700; color: #f87171; }
+.transaction-amount-green { font-size: 16px; font-weight: 700; color: #34d399; }
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #4b5563;
+  font-size: 15px;
+  background: #111827;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+@media (max-width: 480px) {
+  .filter-row { flex-direction: column; }
+}
